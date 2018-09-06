@@ -15,7 +15,7 @@ bool init(const char* title, int xpos, int ypos, int width, int height, int flag
 	}
 	else {
 		return false;
-	}
+	 }
 	return true;
 }
 
