@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP02.BreakUpHelloSDL", "PP0
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP03.GameClass", "PP03.GameClass\PP03.GameClass.vcxproj", "{F8AADDA7-E5D0-410F-AB28-71506B9BE782}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP04.BasicDrawing", "PP04.BasicDrawing\PP04.BasicDrawing.vcxproj", "{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{F8AADDA7-E5D0-410F-AB28-71506B9BE782}.Release|x64.Build.0 = Release|x64
 		{F8AADDA7-E5D0-410F-AB28-71506B9BE782}.Release|x86.ActiveCfg = Release|Win32
 		{F8AADDA7-E5D0-410F-AB28-71506B9BE782}.Release|x86.Build.0 = Release|Win32
+		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Debug|x64.ActiveCfg = Debug|x64
+		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Debug|x64.Build.0 = Debug|x64
+		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Debug|x86.ActiveCfg = Debug|Win32
+		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Debug|x86.Build.0 = Debug|Win32
+		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Release|x64.ActiveCfg = Release|x64
+		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Release|x64.Build.0 = Release|x64
+		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Release|x86.ActiveCfg = Release|Win32
+		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
