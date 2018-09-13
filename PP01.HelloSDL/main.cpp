@@ -18,10 +18,13 @@ int main(int argc, char* args[]) {
 		}
 	}
 
-	SDL_SetRenderDrawColor(g_pRenderer, 0, 0, 255, 255);
+	SDL_SetRenderDrawColor(g_pRenderer, 0, 0, 0, 255);
+	SDL_RenderClear(g_pRenderer);
+	SDL_SetRenderDrawColor(g_pRenderer, 0, 255, 0, 255);
 	SDL_RenderClear(g_pRenderer);
 	SDL_RenderPresent(g_pRenderer);
 	SDL_Delay(10000);
 	SDL_Quit();
+
 	return 0;
 }
