@@ -4,12 +4,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP01.HelloSDL", "PP01.HelloSDL\PP01.HelloSDL.vcxproj", "{369BB163-AB9E-4293-8DFB-87AAC5E0FCD8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4BF629E-C252-46BF-8FED-7E6E9352EA85} = {D4BF629E-C252-46BF-8FED-7E6E9352EA85}
+		{F8AADDA7-E5D0-410F-AB28-71506B9BE782} = {F8AADDA7-E5D0-410F-AB28-71506B9BE782}
+		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922} = {F33F96AE-B3D4-4684-8AFB-AE68D7C85922}
+		{7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92} = {7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP02.BreakUpHelloSDL", "PP02.BreakUpHelloSDL\PP02.BreakUpHelloSDL.vcxproj", "{D4BF629E-C252-46BF-8FED-7E6E9352EA85}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP03.GameClass", "PP03.GameClass\PP03.GameClass.vcxproj", "{F8AADDA7-E5D0-410F-AB28-71506B9BE782}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP04.BasicDrawing", "PP04.BasicDrawing\PP04.BasicDrawing.vcxproj", "{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP05.AnimatingSprite", "PP05.AnimatingSprite\PP05.AnimatingSprite.vcxproj", "{7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +59,14 @@ Global
 		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Release|x64.Build.0 = Release|x64
 		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Release|x86.ActiveCfg = Release|Win32
 		{F33F96AE-B3D4-4684-8AFB-AE68D7C85922}.Release|x86.Build.0 = Release|Win32
+		{7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92}.Debug|x64.ActiveCfg = Debug|x64
+		{7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92}.Debug|x64.Build.0 = Debug|x64
+		{7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92}.Debug|x86.ActiveCfg = Debug|Win32
+		{7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92}.Debug|x86.Build.0 = Debug|Win32
+		{7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92}.Release|x64.ActiveCfg = Release|x64
+		{7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92}.Release|x64.Build.0 = Release|x64
+		{7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92}.Release|x86.ActiveCfg = Release|Win32
+		{7BFC9CF5-A5F5-42A1-9F9F-77B106D47E92}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
