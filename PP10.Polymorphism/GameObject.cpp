@@ -17,9 +17,14 @@ void GameObject::draw(SDL_Renderer* pRenderer) {
 
 void GameObject::update() {
 	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
-	m_x += 1;
+	setMovingspeed(1, 0, 100);
 }
 
 void GameObject::clean() {
 
+}
+
+void GameObject::setMovingspeed(int x, int y, int dist) {
+	m_x += x;
+	m_y += y;
 }

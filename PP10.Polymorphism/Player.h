@@ -8,4 +8,5 @@ public:
 	void draw(SDL_Renderer* pRenderer);
 	void update();
 	void clean();
+	void setMovingspeed(int x, int y, int dist);
 };

@@ -14,7 +14,10 @@ void Player::clean() {
 }
 
 void Player::update() {
+	setMovingspeed(-1, 0, 100);
 	m_currentFrame = int(((SDL_GetTicks() / 50) % 6));
-	m_x -= 1;
 }
 
+void Player::setMovingspeed(int x, int y, int dist) {
+	GameObject::setMovingspeed(x, y, dist);
+}

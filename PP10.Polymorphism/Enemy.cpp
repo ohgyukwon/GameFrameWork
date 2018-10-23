@@ -14,7 +14,10 @@ void Enemy::clean() {
 }
 
 void Enemy::update() {
-	m_x += 1;
-	m_y += 1;
+	setMovingspeed(1, 1, 100);
 	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
+}
+
+void Enemy::setMovingspeed(int x, int y, int dist) {
+	GameObject::setMovingspeed(x, y, dist);
 }
