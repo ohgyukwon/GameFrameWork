@@ -14,10 +14,16 @@ void Monster::clean() {
 }
 
 void Monster::update() {
-	setMovingspeed(-1, -1, 50);
-	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
+	m_currentFrame = int(((SDL_GetTicks() / 100) % 9));
+	m_x += x_speed;
+	m_y += y_speed;
+	moveRightLeft(100);
 }
 
-void Monster::setMovingspeed(int x, int y, int dist) {
-	GameObject::setMovingspeed(x, y, dist);
+void Monster::setMovingspeed(int x, int y) {
+	GameObject::setMovingspeed(x, y);
+}
+
+void Monster::moveRightLeft(int dist) {
+	GameObject::moveRightLeft(dist);
 }
