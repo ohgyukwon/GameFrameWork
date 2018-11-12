@@ -23,3 +23,7 @@ void Projectile::update() {
 void Projectile::clean() {
 
 }
+
+std::string Projectile::getTag() {
+	return m_tag;
+}

@@ -2,6 +2,8 @@
 
 #include "SDLGameObject.h"
 #include "InputHandler.h"
+#include "TextureManager.h"
+#include "Game.h"
 
 class Enemy : public SDLGameObject {
 public:
@@ -9,6 +11,7 @@ public:
 	virtual void draw();
 	virtual void update();
 	virtual void clean();
+	virtual std::string getTag();
 private:
 	void handleInput();
 };

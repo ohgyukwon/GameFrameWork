@@ -4,6 +4,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "InputHandler.h"
+#include "Collider.h"
 
 class Game {
 private:

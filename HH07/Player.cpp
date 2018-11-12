@@ -37,7 +37,11 @@ void Player::handleInput() {
 	}
 	if (TheInputHandler::Instance()->isKeyPressed(SDL_SCANCODE_SPACE)) {
 		if (bulletActive == 0) {
-			TheGame::Instance()->getGameObjects()->push_back(new Projectile(new LoaderParams(this->m_position.getX() + 80, this->m_position.getY() + 40, 16, 16, "bullet")));
+			TheGame::Instance()->getGameObjects()->push_back(new Projectile(new LoaderParams(this->m_position.getX() + 80, this->m_position.getY() + 40, 16, 16, "bullet", "Bullet")));
 		}
 	}
+}
+
+std::string Player::getTag() {
+	return m_tag;
 }

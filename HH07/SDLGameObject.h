@@ -9,7 +9,7 @@ public:
 	virtual void draw();
 	virtual void update();
 	virtual void clean();
-	void drawOnly();
+	virtual std::string getTag();
 protected:
 	Vector2D m_position;
 	Vector2D m_velocity;
@@ -19,4 +19,5 @@ protected:
 	int m_currentRow;
 	int m_currentFrame;
 	std::string m_textureID;
+	std::string m_tag;
 };

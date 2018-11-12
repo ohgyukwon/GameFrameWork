@@ -11,6 +11,7 @@ public:
 	virtual void draw();
 	virtual void update();
 	virtual void clean();
+	virtual std::string getTag();
 private:
 	int bulletActive = 1;
 	void handleInput();

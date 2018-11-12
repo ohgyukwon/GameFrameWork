@@ -7,14 +7,15 @@ Enemy::Enemy(const LoaderParams* pParams) :
 }
 
 void Enemy::draw() {
-	SDLGameObject::draw();
+	TextureManager::Instance()->draw(m_textureID,
+		(int)m_position.getX(), (int)m_position.getY()
+		, m_width, m_height, TheGame::Instance()->getRenderer());
 }
 
 void Enemy::update() {
 	m_velocity.setX(0);
 	m_velocity.setY(0);
 	handleInput();
-	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
 	SDLGameObject::update();
 }
 
@@ -29,4 +30,8 @@ void Enemy::handleInput() {
 
 	Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
 	m_velocity = (*vec - m_position) / 100;
+}
+
+std::string Enemy::getTag() {
+	return m_tag;
 }

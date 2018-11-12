@@ -16,12 +16,20 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 			return false;
 		}
 
+		if (!TheTextureManager::Instance()->load("Assets/wall.png", "wall", m_pRenderer)) {
+			return false;
+		}
+
+		if (!TheTextureManager::Instance()->load("Assets/wall_broken.png", "wall_broken", m_pRenderer)) {
+			return false;
+		}
+
 		if (!TheTextureManager::Instance()->load("Assets/bullet.png", "bullet", m_pRenderer)) {
 			return false;
 		}
 
-		m_gameObjects.push_back(new Player(new LoaderParams(100, 100, 128, 82, "animate")));
-		//m_gameObjects.push_back(new Enemy(new LoaderParams(400, 200,  128, 82, "animate")));
+		m_gameObjects.push_back(new Player(new LoaderParams(100, 100, 128, 82, "animate", "Player")));
+		m_gameObjects.push_back(new Enemy(new LoaderParams(400, 200,  64, 128, "wall", "Enemy")));
 	}
 	else {
 		m_bRunning = false;
@@ -55,6 +63,7 @@ void Game::clean() {
 
 void Game::handleEvents() {
 	TheInputHandler::Instance()->update();
+	TheCollider::Instance()->update();
 }
 
 void Game::quit() {

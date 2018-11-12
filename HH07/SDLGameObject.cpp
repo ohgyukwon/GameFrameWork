@@ -28,3 +28,7 @@ void SDLGameObject::update() {
 void SDLGameObject::clean() {
 
 }
+
+std::string SDLGameObject::getTag() {
+	return m_tag;
+}
