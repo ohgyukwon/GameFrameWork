@@ -3,7 +3,7 @@
 #include "TextureManager.h"
 #include "Player.h"
 #include "Enemy.h"
-#include "Projectile.h"
+#include "InputHandler.h"
 
 class Game {
 private:
@@ -23,6 +23,7 @@ public:
 	void update();
 	void clean();
 	void quit();
+	std::vector<GameObject*> *getGameObjects() { return &m_gameObjects; }
 
 	static Game* Instance() {
 		if (s_pInstance == 0) {

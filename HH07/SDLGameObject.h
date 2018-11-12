@@ -9,6 +9,7 @@ public:
 	virtual void draw();
 	virtual void update();
 	virtual void clean();
+	void drawOnly();
 protected:
 	Vector2D m_position;
 	Vector2D m_velocity;

@@ -2,6 +2,7 @@
 
 #include "SDLGameObject.h"
 #include "InputHandler.h"
+#include "Game.h"
 #include "Projectile.h"
 
 class Player :public SDLGameObject {
@@ -11,6 +12,7 @@ public:
 	virtual void update();
 	virtual void clean();
 private:
+	int bulletActive = 1;
 	void handleInput();
-	std::vector<GameObject*> m_projectiles;
+	std::vector<GameObject*> m_bullets;
 };

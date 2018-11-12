@@ -1,9 +1,10 @@
 #include "Projectile.h"
+#include <iostream>
+using namespace std;
 
 Projectile::Projectile(const LoaderParams* pParams) :
 
 	SDLGameObject(pParams) {
-
 }
 
 void Projectile::draw() {
@@ -13,7 +14,9 @@ void Projectile::draw() {
 }
 
 void Projectile::update() {
-	m_velocity.setX(7);
+	m_velocity.setX(0);
+	m_velocity.setY(0);
+	m_acceleration.setX(7);
 	SDLGameObject::update();
 }
 

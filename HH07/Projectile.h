@@ -2,8 +2,9 @@
 
 #include "SDLGameObject.h"
 #include "InputHandler.h"
-#include "Game.h"
 #include "TextureManager.h"
+#include "Game.h"
+#include "Player.h"
 
 class Projectile :public SDLGameObject {
 public:
