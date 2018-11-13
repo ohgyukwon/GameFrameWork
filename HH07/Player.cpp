@@ -13,12 +13,16 @@ void Player::update() {
 	m_velocity.setX(0);
 	m_velocity.setY(0);
 	handleInput();
-	bulletActive = int(((SDL_GetTicks() / 10) % 11));
+	bulletActive = int(((SDL_GetTicks() / 10) % 50));
 	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
 	SDLGameObject::update();
 }
 
 void Player::clean() {
+
+}
+
+void Player::Collide(GameObject* pCollider) {
 
 }
 

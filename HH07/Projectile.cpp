@@ -20,6 +20,12 @@ void Projectile::update() {
 	SDLGameObject::update();
 }
 
+void Projectile::Collide(GameObject* pCollider) {
+	if (pCollider->getTag() == "Enemy") {
+		delete this;
+	}
+}
+
 void Projectile::clean() {
 
 }

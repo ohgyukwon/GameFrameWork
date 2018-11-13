@@ -15,12 +15,18 @@ void Enemy::draw() {
 void Enemy::update() {
 	m_velocity.setX(0);
 	m_velocity.setY(0);
-	handleInput();
+	//handleInput();
 	SDLGameObject::update();
 }
 
 void Enemy::clean() {
 
+}
+
+void Enemy::Collide(GameObject* pCollider) {
+	if (pCollider->getTag() == "Bullet") {
+		m_textureID = "wall_broken";
+	}
 }
 
 void Enemy::handleInput() {

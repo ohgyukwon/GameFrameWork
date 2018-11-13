@@ -29,7 +29,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		}
 
 		m_gameObjects.push_back(new Player(new LoaderParams(100, 100, 128, 82, "animate", "Player")));
-		m_gameObjects.push_back(new Enemy(new LoaderParams(400, 200,  64, 128, "wall", "Enemy")));
+		m_gameObjects.push_back(new Enemy(new LoaderParams(500, 100,  64, 128, "wall", "Enemy")));
 	}
 	else {
 		m_bRunning = false;
@@ -51,6 +51,12 @@ void Game::update() {
 	for (std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++) {
 		m_gameObjects[i]->update();
 	}
+	for (std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++) {
+		for (std::vector<GameObject*>::size_type j = 0; j != m_gameObjects.size(); j++) {
+			m_gameObjects[i]->Collide(m_gameObjects[j]);
+			m_gameObjects[j]->Collide(m_gameObjects[i]);
+		}
+	}
 }
 
 void Game::clean() {
@@ -63,7 +69,6 @@ void Game::clean() {
 
 void Game::handleEvents() {
 	TheInputHandler::Instance()->update();
-	TheCollider::Instance()->update();
 }
 
 void Game::quit() {

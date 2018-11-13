@@ -16,9 +16,12 @@ public:
 	}
 	void update();
 	void clean();
+	bool Collision(GameObject* object1, GameObject* object2);
 private:
 	Collider();
 	~Collider();
+	float rc1_left, rc1_right, rc1_up, rc1_down;
+	float rc2_left, rc2_right, rc2_up, rc2_down;
 	static Collider* s_pInstance;
 	std::vector<GameObject*> v;
 	std::vector<GameObject*>::iterator iter1, iter2;
