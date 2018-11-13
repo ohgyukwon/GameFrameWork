@@ -51,12 +51,24 @@ void Game::update() {
 	for (std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++) {
 		m_gameObjects[i]->update();
 	}
-	for (std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++) {
-		for (std::vector<GameObject*>::size_type j = 0; j != m_gameObjects.size(); j++) {
+
+	for (int i = 0; i < m_gameObjects.size()-1; i++) {
+		for (int j = i+1; j < m_gameObjects.size(); j++) {
+			if (TheCollider::Instance()->Collision(m_gameObjects[i],m_gameObjects[j]))
 			m_gameObjects[i]->Collide(m_gameObjects[j]);
 			m_gameObjects[j]->Collide(m_gameObjects[i]);
 		}
 	}
+	//for (iter1 = m_gameObjects.begin(); iter1 != m_gameObjects.end(); iter1++) {
+	//	for (iter2 = m_gameObjects.begin(); iter2 != m_gameObjects.end(); iter2++) {
+	//		if (TheCollider::Instance()->Collision((*iter1), (*iter2)) && 
+	//			(*iter1)->getTag() == "Bullet" && 
+	//			(*iter2)->getTag() == "Enemy") {
+	//			m_gameObjects.erase(iter1);
+	//			break;
+	//		}
+	//	}
+	//}
 }
 
 void Game::clean() {
@@ -69,6 +81,7 @@ void Game::clean() {
 
 void Game::handleEvents() {
 	TheInputHandler::Instance()->update();
+	TheCollider::Instance()->update();
 }
 
 void Game::quit() {

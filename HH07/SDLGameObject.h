@@ -14,7 +14,7 @@ public:
 	virtual int getPositionY() { return this->m_position.getY(); }
 	virtual int getWidth() { return this->m_width; }
 	virtual int getHeight() { return this->m_height; }
-	virtual std::string getTag();
+	virtual std::string getTag() { return this->m_tag; };
 protected:
 	Vector2D m_position;
 	Vector2D m_velocity;

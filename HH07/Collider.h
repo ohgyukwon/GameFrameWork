@@ -20,8 +20,8 @@ public:
 private:
 	Collider();
 	~Collider();
-	float rc1_left, rc1_right, rc1_up, rc1_down;
-	float rc2_left, rc2_right, rc2_up, rc2_down;
+	int rc1_left, rc1_right, rc1_top, rc1_bottom;
+	int rc2_left, rc2_right, rc2_top, rc2_bottom;
 	static Collider* s_pInstance;
 	std::vector<GameObject*> v;
 	std::vector<GameObject*>::iterator iter1, iter2;

@@ -12,6 +12,7 @@ private:
 	static Game* s_pInstance;
 	std::map<std::string, SDL_Texture*> m_textureMap;
 	std::vector<GameObject*> m_gameObjects;
+	std::vector<GameObject*>::iterator iter1, iter2;
 	SDL_Window * m_pWindow;
 	SDL_Renderer* m_pRenderer;
 	bool m_bRunning;

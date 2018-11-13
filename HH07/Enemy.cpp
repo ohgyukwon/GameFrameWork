@@ -24,7 +24,7 @@ void Enemy::clean() {
 }
 
 void Enemy::Collide(GameObject* pCollider) {
-	if (pCollider->getTag() == "Bullet") {
+	if (TheCollider::Instance()->Collision(this, pCollider) &&  pCollider->getTag() == "Bullet") {
 		m_textureID = "wall_broken";
 	}
 }
@@ -36,8 +36,4 @@ void Enemy::handleInput() {
 
 	Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
 	m_velocity = (*vec - m_position) / 100;
-}
-
-std::string Enemy::getTag() {
-	return m_tag;
 }

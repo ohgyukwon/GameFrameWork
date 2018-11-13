@@ -1,5 +1,6 @@
 #include "Projectile.h"
 #include <iostream>
+#include "Game.h"
 using namespace std;
 
 Projectile::Projectile(const LoaderParams* pParams) :
@@ -21,15 +22,20 @@ void Projectile::update() {
 }
 
 void Projectile::Collide(GameObject* pCollider) {
-	if (pCollider->getTag() == "Enemy") {
-		delete this;
+  	if (TheCollider::Instance()->Collision(this, pCollider) && pCollider->getTag() == "Enemy") {
+		std::vector<GameObject*>::iterator iter;
+		std::vector<GameObject*>::iterator iterEnd = TheGame::Instance()->getGameObjects()->end();
+		for (iter = TheGame::Instance()->getGameObjects()->begin(); iter != iterEnd; iter++)
+		{
+			if (*iter == this)
+			{
+				TheGame::Instance()->getGameObjects()->erase(iter);
+				break;
+			}
+		}
 	}
 }
 
 void Projectile::clean() {
 
-}
-
-std::string Projectile::getTag() {
-	return m_tag;
 }
